@@ -1,0 +1,70 @@
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin: 30% auto;
+}
+
+.item {
+    height: 100%;
+    width: 530px;
+    display: none;
+    position: relative;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.item.active {
+    display: block;
+}
+
+.item .text {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    text-align: right;
+    color: white;
+}
+
+.thumbs {
+    height: 300px;
+    background-color: black;
+    position: relative;
+}
+
+.thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+.thumb {
+    opacity: .5;
+    height: 60px;
+}
+
+.thumb.active {
+    opacity: 1;
+}
+
+.fas {
+    background-color: gray;
+    position: absolute;
+    cursor: pointer;
+    z-index: 99;
+}
+
+.fa-arrow-circle-up {
+    top: 0;
+    right: 60px;
+}
+
+.fa-arrow-circle-down {
+    bottom: 0;
+    right: 60px;
+}
