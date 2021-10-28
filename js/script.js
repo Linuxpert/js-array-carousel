@@ -69,7 +69,16 @@ let activePosition =0;
 document.querySelector(".fa-arrow-circle-down").addEventListener("click", 
     function(){
 
-        activePosition = activePosition +1;
+
+        //non sono alla fine degli elementi
+        if(activePosition < items.length - 1){
+            activePosition = activePosition +1;
+        }else{//sono alla fine degli elementi
+            //resetto la variabile di indice/posizione
+            activePosition = 0
+        }
+        
+           
 
         document.querySelector(".item.active").classList.remove("active");
         document.getElementsByClassName("item")[activePosition].classList.add("active");
@@ -85,7 +94,17 @@ document.querySelector(".fa-arrow-circle-down").addEventListener("click",
 document.querySelector(".fa-arrow-circle-up").addEventListener("click", 
     function(){
 
-        activePosition = activePosition -1;
+
+        //se indice/posizione è 0
+        if(activePosition === 0){
+            //faccio tornare a ultimo elemento
+            activePosition = items.length -1
+        }else {
+            //altrimenti
+            activePosition = activePosition -1;
+        }
+            
+       
 
         document.querySelector(".item.active").classList.remove("active");
         document.getElementsByClassName("item")[activePosition].classList.add("active");
